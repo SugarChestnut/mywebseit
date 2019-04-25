@@ -18,5 +18,10 @@ html {
     width: 70%;
     height: 150px;
     text-align: center;
-    margin: 10px auto;
+    margin: auto;
+    margin-top: 10%;
+}
+
+h1, h2, p{
+    color: #FFFFFF;
 }
