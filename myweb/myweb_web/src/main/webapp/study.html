@@ -13,104 +13,169 @@
     <link href="css/footer.css" rel="stylesheet">
     <link href="css/study.css" rel="stylesheet">
 
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- 引入angular -->
-    <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
 </head>
-<body>
-<!-- 导入头部 -->
-<div id="header"></div>
+<body data-spy="scroll" data-target="#side-navbar" data-offset="100">
 
-<div class="container">
-    <!--<div class="row">
-        <div class="jumbotron">
-            <h1>Hello, world!</h1>
-            <p>...</p>
-            <p><a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a></p>
+<!-- 标题栏 -->
+<div>
+    <div class="container-fluid" id="top">
+        <div class="row">
+            <
         </div>
-    </div>-->
-    <div class="row r_navbar">
-        <div >
-            <nav class="navbar navbar-default">
-                <div class="container-fluid">
-                    <!-- Brand and toggle get grouped for better mobile display -->
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                        </button>
-                        <a class="navbar-brand" href="#">导航</a>
-                    </div>
-
-                    <!-- Collect the nav links, forms, and other content for toggling -->
-                    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                        <ul class="nav navbar-nav">
-                            <li class="active"><a href="#java" data-toggle="tab">Java</a></li>
-                            <li><a href="#python" data-toggle="tab">Python</a></li>
-                            <li><a href="#linux" data-toggle="tab">Linux</a></li>
-                            <li><a href="#web" data-toggle="tab">Web</a></li>
-                            <li><a href="#mysql" data-toggle="tab">MySQL</a></li>
-                        </ul>
-
-                        <form class="navbar-form navbar-right" role="search">
-                            <div class="form-group">
-                                <input type="text" class="form-control" placeholder="Search">
-                            </div>
-                            <button type="submit" class="btn btn-default">Submit</button>
-                        </form>
-                    </div><!-- /.navbar-collapse -->
-
-                </div><!-- /.container-fluid -->
-            </nav>
-
-        </div>
-    </div>
-    <!-- 选项卡 -->
-    <div id="myTabContent" class="tab-content">
-        <div class="tab-pane active in" id="java">
-            <div>
-                <h1>暂无内容</h1>
+        <div class="row">
+            <div class="i-header-title">
+                <h1>学习页面</h1>
             </div>
         </div>
-        <div class="tab-pane fade" id="python">
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <td><a href="scrapy.html">Python爬虫</a></td>
-                </tr>
-            </table>
+    </div>
+</div>
+<!-- 导航栏 -->
+
+<div>  
+    <nav class="navbar navbar-default navbar-static-top" role="navigation"">
+        <div class="container-fluid">
+            <div class=" nav navbar-nav" style="margin-left: 7%">
+                <img src="imgs/logo.png" style="width: 40px;height: 50px ">
+            </div>
+            <div class="nav navbar-nav" style="width: 100px;padding-top: 1%">
+                <h5>Rtt's website</h5>
+            </div>
+            <div id="navbar" class="collapse navbar-collapse">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="index.html">首页</a></li>
+                    <li><a href="#">Java</a></li>
+                    <li><a href="#">Python</a></li>
+                    <li><a href="#">Linux</a></li>
+                    <li><a href="#">Html</a></li>
+                    <li><a href="#">Ps</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                            Other
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">jmeter</a></li>
+                            <li><a href="#">EJB</a></li>
+                            <li><a href="#">Jasper Report</a></li>
+                        </ul>
+                    </li>
+                </ul>
+
+                <div>
+                    <form class="navbar-form navbar-right" role="search" style="margin-right: 7%">
+                        <div class="form-group">
+                            <input type="text" class="form-control" placeholder="Search">
+                        </div>
+                        <button type="submit" class="btn btn-default">提交</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="linux">
-            <br>
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <td>python</td>
-                </tr>
-            </table>
+    </nav>
+</div>
+
+<!-- 主体内容 -->
+<div class="container-fluid" id="i-content">
+    <div class="row">
+        <!-- 左边区域 -->
+        <div class="col-lg-2 bk" id="i-left-content" style="background-color: bisque;height: 500px">
+            111
         </div>
-        <div class="tab-pane fade" id="web">
-            <br>
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <td>web</td>
-                </tr>
-            </table>
+
+        <!-- 中间区域 -->
+        <div class="col-lg-8" id="i-center-content">
+            <div class="row bk" id="Java" style="height: 300px" >
+                <div class="i-inline">
+                    <img src="./imgs/java-icon.png">
+                </div>
+                <div>
+                    <h5>Java</h5>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row bk" id="Python" style="height: 300px">
+                <div class="i-inline">
+                    <img src="./imgs/java-icon.png">
+                </div>
+                <div>
+                    <h5>Python</h5>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row bk" id="Linux" style="height: 300px">
+                <div class="i-inline">
+                    <img src="./imgs/java-icon.png">
+                </div>
+                <div>
+                    <h5>Linux</h5>
+                </div>
+                <div>
+                    <hr>
+                </div>
+                </div>
+            <div class="row bk" id="Html" style="height: 300px">
+                <div class="i-inline">
+                    <img src="./imgs/java-icon.png">
+                </div>
+                <div>
+                    <h5>Html</h5>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
+            <div class="row bk" id="Ps" style="height: 300px">
+                <div class="i-inline">
+                    <img src="./imgs/java-icon.png">
+                </div>
+                <div>
+                    <h5>Ps</h5>
+                </div>
+                <div>
+                    <hr>
+                </div>
+            </div>
         </div>
-        <div class="tab-pane fade" id="mysql">
-            <br>
-            <table class="table table-bordered table-striped">
-                <tr>
-                    <td>mysql</td>
-                </tr>
-            </table>
+
+        <!-- 右边区域 -->
+        <div class="col-lg-2 bk" id="i-right-content">
+            <!-- 侧边导航栏 -->
+            <nav id="side-navbar">
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">首页</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go">Java</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go">Python</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go">Linux</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go">Html</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go">Ps</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="javascript:;" class="btn i-go" title="返回顶部">top</a>
+                    </li>
+                </ul>
+            </nav>
         </div>
     </div>
 </div>
 
-<!-- 导入脚部 -->
-<div id="footer"></div>
-<!-- 导入头部和脚部 -->
-<script src="js/include.js"></script>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- 引入angular -->
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/study.js"></script>
 </body>

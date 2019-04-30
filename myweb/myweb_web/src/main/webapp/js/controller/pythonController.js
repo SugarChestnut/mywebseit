@@ -10,8 +10,6 @@ app.controller("pythonController", function ($scope, pythonService) {
             if (!response.state) {
                 alert(response.message);
             }
-        }).error(function () {
-            alert("页面找不到");
         });
     }
 });
