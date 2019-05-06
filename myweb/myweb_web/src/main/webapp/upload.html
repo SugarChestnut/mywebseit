@@ -14,69 +14,103 @@
     <link href="css/upload.css" rel="stylesheet">
 
 </head>
-<body>
-    <!-- <script id="editor" type="text/plain" name="gdesc" style="width: 100%; height: 350px;"></script> -->
-    <div class="container-fluid i-top">
-        <div>
-            <h1 style="text-align: center">写文章</h1>
-        </div>
+<body style="background-color: #CAE1FF">
+<!-- <script id="editor" type="text/plain" name="gdesc" style="width: 100%; height: 350px;"></script> -->
+<div class="container-fluid i-top">
+    <div>
+        <h1 style="text-align: center">博客上传</h1>
     </div>
-    <div class="container">
-        <form action="" method="">
-            <!-- 
-                文章标题，简介，选择分类，时间，作者，是否删除，                     用angular watch方法，实现下拉关联 
-                要存入数据库
-                图片最好有自定义上传方法，上传到图片服务器
-                最好直接生成静态页面，减少io读取，生成的静态页面路径存入数据库
-            -->
-        </form>
-        <div>
-            <textarea id="editor" name="editor" style="width: 100%;height: 600px;"></textarea>
+</div>
+<div class="container">
+    <form action="" method="" class="form-horizontal" role="form">
+        <!--
+            文章标题，简介，选择分类，时间，作者，是否删除，                     用angular watch方法，实现下拉关联
+            要存入数据库
+            图片最好有自定义上传方法，上传到图片服务器
+            最好直接生成静态页面，减少io读取，生成的静态页面路径存入数据库
+        -->
+        <div class="form-group row">
+            <label class="col-lg-1 control-label">标题：</label>
+            <div class="col-lg-11">
+                <input class="form-control" id="title" type="text" placeholder="标题...">
+            </div>
         </div>
-    </div>
-    
+        <div class="form-group row">
+            <label class="col-lg-1 control-label">简介：</label>
+            <div class="col-lg-11">
+                <input class="form-control" id="introduction" type="text" placeholder="简介...">
+            </div>
+        </div>
+        <div class="form-group row">
+            <label class="col-lg-1 control-label">分类：</label>
+            <div class="col-lg-2">
+                <select class="form-control" ng-model="" ng-options=""></select></td>
+            </div>
+            <div class="col-lg-2">
+                <select class="form-control" ng-model="" ng-options=""></select></td>
+            </div>
+            <div class="col-lg-2">
+                <select class="form-control" ng-model="" ng-options=""></select></td>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-1"></div>
+            <div class="col-lg-11">
+                <textarea id="editor" name="editor" style="width: 100%; height: 500px;"></textarea>
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-4">
+                <button type="submit" class="btn btn-primary btn-lg btn-block">提交</button>
+            </div>
+            <div class="col-lg-4"></div>
+        </div>
+
+    </form>
+
+</div>
 
 
-
-    <script src="js/jquery/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <!-- 引入angular -->
-    <script type="text/javascript" src="js/angularjs/angular.min.js"></script>
-    <script type="text/javascript" src="js/upload.js"></script>
-    <!-- baidu-UEditor富文本编辑器 -->
-    <script type="text/javascript" src="ueditor/ueditor.config.js" charset="utf-8"></script>
-    <script type="text/javascript" src="ueditor/ueditor.all.min.js" charset="utf-8"></script>
-    <script type="text/javascript" src="ueditor/lang/zh-cn/zh-cn.js" charset="utf-8"></script>
-    <script type="text/javascript">
-        var ue = UE.getEditor("editor", {
-            toolbars: [[
-                'undo', //撤销
-                'bold', //加粗
-                'underline', //下划线
-                'preview', //预览
-                'horizontal', //分隔线
-                'inserttitle', //插入标题
-                'cleardoc', //清空文档
-                'fontfamily', //字体
-                'fontsize', //字号
-                'paragraph', //段落格式
-                'simpleupload', //单图上传
-                'insertimage', //多图上传
-                'attachment', //附件
-                'music', //音乐
-                'inserttable', //插入表格
-                'emotion', //表情
-                'insertvideo', //视频
-                'justifyleft', //居左对齐
-                'justifyright', //居右对齐
-                'justifycenter', //居中对
-                'justifyjustify', //两端对齐
-                'forecolor', //字体颜色
-                'fullscreen', //全屏
-                'edittip ', //编辑提示
-                'customstyle', //自定义标题
-                'template', //模板
-            ]]
-        });
-    </script>
+<script src="js/jquery/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!-- 引入angular -->
+<script type="text/javascript" src="js/angularjs/angular.min.js"></script>
+<script type="text/javascript" src="js/upload.js"></script>
+<!-- baidu-UEditor富文本编辑器 -->
+<script type="text/javascript" src="ueditor/ueditor.config.js" charset="utf-8"></script>
+<script type="text/javascript" src="ueditor/ueditor.all.min.js" charset="utf-8"></script>
+<script type="text/javascript" src="ueditor/lang/zh-cn/zh-cn.js" charset="utf-8"></script>
+<script type="text/javascript">
+    var ue = UE.getEditor("editor", {
+        toolbars: [[
+            'undo', //撤销
+            'bold', //加粗
+            'underline', //下划线
+            'preview', //预览
+            'horizontal', //分隔线
+            'inserttitle', //插入标题
+            'cleardoc', //清空文档
+            'fontfamily', //字体
+            'fontsize', //字号
+            'paragraph', //段落格式
+            'simpleupload', //单图上传
+            'insertimage', //多图上传
+            'attachment', //附件
+            'music', //音乐
+            'inserttable', //插入表格
+            'emotion', //表情
+            'insertvideo', //视频
+            'justifyleft', //居左对齐
+            'justifyright', //居右对齐
+            'justifycenter', //居中对
+            'justifyjustify', //两端对齐
+            'forecolor', //字体颜色
+            'fullscreen', //全屏
+            'edittip ', //编辑提示
+            'customstyle', //自定义标题
+            'template', //模板
+        ]]
+    });
+</script>
 </body>
